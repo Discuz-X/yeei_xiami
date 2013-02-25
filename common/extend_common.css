@@ -169,7 +169,7 @@ Powered by Yeei.cn
 #scbar_type_menu { margin-top:4px;margin-left:-9px;min-width:51px;width:51px;}
 #scbar_yeei .pn {cursor: pointer; -moz-box-shadow: 0 0px 0 #E5E5E5; -webkit-box-shadow: 0 0px 0 #E5E5E5; box-shadow: 0 0px 0 #E5E5E5; }
 /*----------------Yeei!Design 搜索结束------------------------------*/
-.member{ float:left; padding:1px 0 0 15px;font-size:12px;}
+.member{ float:left; padding:1px 0 0 15px;font-size:12px; height: 26px; }
 .member .avt{ float:left; margin-top: -22px; overflow:hidden}
 .member .avt img{}
 .member .avt a{}
