@@ -15,9 +15,19 @@
 <div class="c_yb"><div class="c_yb2"><div class="c_r"><div class="c_l">
 <ul>
 <div class="y"><!--{hook/global_footerlink}--><!--{if $_G['setting']['statcode']}-->$_G['setting']['statcode']<!--{/if}--></div>
-<!--{loop $_G['setting']['footernavs'] $nav}--><!--{if $nav['available'] && ($nav['type'] && (!$nav['level'] || ($nav['level'] == 1 && $_G['uid']) || ($nav['level'] == 2 && $_G['adminid'] > 0) || ($nav['level'] == 3 && $_G['adminid'] == 1)) ||
-						!$nav['type'] && ($nav['id'] == 'stat' && $_G['group']['allowstatdata'] || $nav['id'] == 'report' && $_G['uid'] || $nav['id'] == 'archiver' || $nav['id'] == 'mobile'))}--><!--{if $nav['id'] == 'mobile' && $_G['setting']['mobile']['allowmobile'] != 1}--><!--{eval continue;}--><!--{/if}-->$nav[code]<span class="pipe">|</span><!--{/if}--><!--{/loop}-->
-						
+<!--{loop $_G['setting']['footernavs'] $nav}-->
+	<!--{if $nav['available'] && ($nav['type'] && (!$nav['level']
+	 || ($nav['level'] == 1 && $_G['uid'])
+	 || ($nav['level'] == 2 && $_G['adminid'] > 0)
+	 || ($nav['level'] == 3 && $_G['adminid'] == 1))
+	 || !$nav['type'] && ($nav['id'] == 'stat' && $_G['group']['allowstatdata']
+	 || $nav['id'] == 'report' && $_G['uid'] || $nav['id'] == 'archiver'
+	 || $nav['id'] == 'mobile'))}-->
+	<!--{if $nav['id'] == 'mobile' && $_G['setting']['mobile']['allowmobile'] != 1}-->
+	<!--{eval continue;}-->
+	<!--{/if}-->$nav[code]<span class="pipe">|</span>
+	<!--{/if}--><!--{/loop}-->
+	<strong><a href="$_G['setting']['siteurl']" target="_blank">$_G['setting']['sitename']</a></strong><span class="pipe">|</span>
 				<!--{if $_G['setting']['icp']}--><a href="http://www.miitbeian.gov.cn/" target="_blank">$_G['setting']['icp']</a><!--{/if}-->
 				
 				
