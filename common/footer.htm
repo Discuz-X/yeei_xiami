@@ -178,29 +178,17 @@
 				</span>
 			</p>
 
-			<p class="xs0 z">&copy; 2001-2013 Powered by <a href="http://www.discuz.net" target="_blank">Discuz!</a>
-				<em>$_G['setting']['version']</em>. Theme By <a href="http://www.yeei.cn" target="_blank">Yeei!</a> .
-				Modify by <a
-						href="http://about.me/bovvic" rel="nofollow" target="_blank">Bovvic</a><!--Yeei版权所有，请勿修改版权-->
+			<p class="xs0 z">&copy; 2001-2012 <a href="http://www.comsenz.com" target="_blank">Comsenz
+				Inc.</a> | Powered by <a href="http://www.discuz.net" target="_blank">Discuz!</a> <em>$_G['setting']['version']</em>
+				| Theme By <a href="http://www.yeei.cn" target="_blank">Yeei!</a> . Modify by <a
+						href="http://about.me/bovvic" rel="nofollow" target="_blank">Bovvic</a> <!--Yeei版权所有，请勿修改版权-->
 				<!--{if !empty($_G['setting']['boardlicensed'])}--> <a
 						href="http://license.comsenz.com/?pid=1&host=$_SERVER[HTTP_HOST]" target="_blank">Licensed</a><!--{/if}-->
 			</p>
 			<!--{eval updatesession();}-->
 			<!--{if $_G['uid'] && $_G['group']['allowinvisible']}-->
 			<script type="text/javascript">
-				var invisiblestatus = '
-				<!--{if $_G['session']['invisible']}-->
-				{
-					lang
-					login_invisible_mode
-				}
-				<!--{else}-->
-				{
-					lang
-					login_normal_mode
-				}
-				<!--{/if}-->
-				';
+				var invisiblestatus = '<!--{if $_G['session']['invisible']}-->{lang login_invisible_mode}<!--{else}-->{lang login_normal_mode}<!--{/if}-->';
 				var loginstatusobj = $('loginstatusid');
 				if (loginstatusobj != undefined && loginstatusobj != null) loginstatusobj.innerHTML = invisiblestatus;
 				<!--{/if}-->
